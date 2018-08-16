@@ -1,4 +1,6 @@
 #!/bin/bash
+workdir=/Users/eric/workspace/random-numbers/
+cd $workdir
 date=`date "+%Y-%m-%d"`
 num=`awk -v min=1 -v max=1000000 'BEGIN{srand(); print int(min+rand()*(max-min+1))}'`
 localfile=~/.githubrandnum/$date-$num.txt
